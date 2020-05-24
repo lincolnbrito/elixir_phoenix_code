@@ -17,31 +17,20 @@ defmodule Cards do
 
   @doc """
     Shuffle a given `deck`.
-
-  ## Examples
-      iex> deck = Cards.create_deck
-      ["Ace of Spades", "Two of Spades", "Three of Spades", "Four of Spades",
-      "Five of Spades", "Ace of Clubs", "Two of Clubs", "Three of Clubs",
-      "Four of Clubs", "Five of Clubs", "Ace of Hearts", "Two of Hearts",
-      "Three of Hearts", "Four of Hearts", "Five of Hearts", "Ace of Diamonds",
-      "Two of Diamonds", "Three of Diamonds", "Four of Diamonds",
-      "Five of Diamonds"]
-
-      iex> Cards.shuffle(deck)
-      ["Two of Diamonds", "Three of Clubs", "Four of Hearts",
-      "Three of Diamonds", "Four of Clubs", "Two of Spades", "Five of Hearts",
-      "Ace of Spades", "Two of Hearts", "Four of Diamonds", "Five of Clubs",
-      "Three of Hearts", "Two of Clubs", "Four of Spades", "Ace of Diamonds",
-      "Five of Spades", "Three of Spades", "Ace of Clubs", "Five of Diamonds",
-      "Ace of Hearts"]
-
   """
   def shuffle(deck) do
     Enum.shuffle(deck)
   end
 
   @doc """
-    Return `true` if the `deck` has the `card`, return `false` otherwise. 
+    Determines whether a deck contains a given card.
+
+  ## Examples
+
+      iex> deck = Cards.create_deck
+      iex> Cards.contains?(deck, "Ace of Spades")
+      true
+
   """
   def contains?(deck, card) do
     Enum.member?(deck, card)
