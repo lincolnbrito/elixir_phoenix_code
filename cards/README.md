@@ -1,4 +1,4 @@
-# ElixirCards
+# Cards
 
 **Elixir app to manage cards**
 
