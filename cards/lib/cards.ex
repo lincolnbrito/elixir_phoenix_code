@@ -1,4 +1,4 @@
-defmodule ElixirCards do
+defmodule Cards do
   def create_deck do
     values = ["Ace", "Two", "Three", "Four", "Five"]
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
@@ -33,8 +33,8 @@ defmodule ElixirCards do
   end
 
   def create_hand(hand_size) do
-    ElixirCards.create_deck
-    |> ElixirCards.shuffle
-    |> ElixirCards.deal(hand_size)
+    Cards.create_deck
+    |> Cards.shuffle
+    |> Cards.deal(hand_size)
   end
 end
