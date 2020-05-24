@@ -3,11 +3,13 @@ defmodule ElixirCards do
     values = ["Ace", "Two", "Three", "Four", "Five"]
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 
-    for value <- values do
+    cards = for value <- values do
       for suit <- suits do
         "#{value} of #{suit}"
       end
     end
+
+    List.flatten(cards)
   end
 
   def shuffle(deck) do
